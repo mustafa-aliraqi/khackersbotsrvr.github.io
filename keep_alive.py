@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,render_template
 from threading import Thread
 import random
 
@@ -7,7 +7,7 @@ app = Flask('')
 
 @app.route('/')
 def home():
-	return 'Bot is on'
+	return render_template('index.html')
 
 
 def run():
